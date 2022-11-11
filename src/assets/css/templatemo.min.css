@@ -11,6 +11,7 @@ p,
 ul {
   font-family: Roboto, sans-serif;
 }
+
 a,
 body,
 div,
@@ -37,13 +38,13 @@ ul {
   font-weight: 500 !important;
 }
 .text-warning {
-  color: #ad6e0e !important;
+  color: #6ba3bd !important;
 }
 .text-muted {
   color: #bcbcbc !important;
 }
 .text-success {
-  color: #59ab6e !important;
+  color: #6ba3bd !important;
 }
 .text-light {
   color: #cfd6e1 !important;
@@ -57,16 +58,17 @@ ul {
 .bg-black {
   background-color: #1d242d !important;
 }
-.bg-success,
-.btn-success {
-  background-color: #59ab6e !important;
+.bg-warning,
+.btn-warning {
+  background-color: #6ba3bd !important;
 }
-.btn-success {
-  border-color: #56ae6c !important;
+.btn-warning {
+  border-color: #6ba3bd !important;
+  color: #fff;
 }
 .pagination .page-link.active,
 .pagination .page-link:hover {
-  background-color: #ad6e0e;
+  background-color: #6ba3bd;
   color: #fff;
 }
 #templatemo_nav_top {
@@ -79,7 +81,7 @@ ul {
   color: #212934;
 }
 #templatemo_main_nav a:hover {
-  color: #ad6e0e;
+  color: #6ba3bd;
 }
 #templatemo_main_nav .navbar .nav-icon {
   margin-right: 20px;
@@ -94,7 +96,7 @@ ul {
   color: #333d4a;
 }
 .shop-top-menu a:hover {
-  color: #ad6e0e !important;
+  color: #6ba3bd !important;
 }
 .product-wap {
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
@@ -112,7 +114,7 @@ ul {
   background: #e0e0e0;
 }
 .product-wap .product-color-dot.color-dot-green {
-  background: #0bff7e;
+  background: #6ba3bd;
 }
 .card.product-wap .card .product-overlay {
   background: rgba(0, 0, 0, 0.2);
@@ -145,11 +147,11 @@ ul {
 }
 #template-mo-zay-hero-carousel .carousel-indicators li {
   margin-top: -50px;
-  background-color: #ad6e0e;
+  background-color: #6ba3bd;
 }
 #template-mo-zay-hero-carousel .carousel-control-next i,
 #template-mo-zay-hero-carousel .carousel-control-prev i {
-  color: #ad6e0e !important;
+  color: #6ba3bd !important;
   font-size: 2.8em !important;
 }
 .tempaltemo-carousel .h1 {
@@ -164,7 +166,7 @@ ul {
   color: #fff;
 }
 .services-icon-wap:hover {
-  background: #ad6e0e;
+  background: #6ba3bd;
 }
 .leaflet-control,
 .leaflet-control a {
@@ -177,7 +179,7 @@ ul {
   color: #dcdde1;
 }
 #tempaltemo_footer a:hover {
-  color: #ad6e0e;
+  color: #6ba3bd;
 }
 #tempaltemo_footer ul.footer-link-list li {
   padding-top: 10px;
@@ -235,4 +237,23 @@ ul {
     width: 12px;
     height: 12px;
   }
+}
+.aboutUs-img {
+  width: 250px;
+  height: 250px;
+}
+
+.rounded-circle {
+  max-width: 300px;
+  height: 300px;
+}
+.product-card {
+  text-decoration: none;
+  color: #000;
+}
+.userName {
+  font-size: 10px;
+}
+.logout {
+  font-size: 12px;
 }

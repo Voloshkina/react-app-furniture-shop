@@ -1,52 +1,41 @@
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 export default function Categories() {
+  const categories = useSelector((state) => state.categories.value);
+  const currentItems = categories.filter(
+    (item) => item.categoryImg && item.category
+  );
+
   return (
-    <section class="container py-5">
-      <div class="row text-center pt-3">
-        <div class="col-lg-6 m-auto">
-          <h1 class="h1">Асортимент товарів</h1>
+    <section className="container py-5">
+      <div className="row text-center pt-3">
+        <div className="col-lg-6 m-auto">
+          <h1 className="h1">Категорії товарів</h1>
           <p>
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
             officia deserunt mollit anim id est laborum.
           </p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12 col-md-4 p-5 mt-3">
-          <a href="#">
-            <img
-              src="./assets/img/category_img_01.jpg"
-              class="rounded-circle img-fluid border"
-            />
-          </a>
-          <h5 class="text-center mt-3 mb-3">Горіхи</h5>
-          <p class="text-center">
-            <a class="btn btn-success">Купити</a>
-          </p>
-        </div>
-        <div class="col-12 col-md-4 p-5 mt-3">
-          <a href="#">
-            <img
-              src="./assets/img/category_img_02.jpg"
-              class="rounded-circle img-fluid border"
-            />
-          </a>
-          <h2 class="h5 text-center mt-3 mb-3">Shoes</h2>
-          <p class="text-center">
-            <a class="btn btn-success">Купити</a>
-          </p>
-        </div>
-        <div class="col-12 col-md-4 p-5 mt-3">
-          <a href="#">
-            <img
-              src="./assets/img/category_img_03.jpg"
-              class="rounded-circle img-fluid border"
-            />
-          </a>
-          <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
-          <p class="text-center">
-            <a class="btn btn-success">Купити</a>
-          </p>
-        </div>
+      <div className="row">
+        {currentItems.map((item, i) => (
+          <div className="col-6 col-md-3 p-5 mt-3 align-self-center">
+            <a href="#">
+              <img
+                key={i + 1}
+                src={item.categoryImg}
+                className=" img-thumbnail border"
+              />
+            </a>
+            <h5 className="text-center mt-3 mb-3">{item.category}</h5>
+            <p className="text-center">
+              <Link to="/shop" className="btn btn-warning">
+                Купити
+              </Link>
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );

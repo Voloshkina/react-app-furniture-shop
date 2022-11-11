@@ -1,53 +1,53 @@
 export default function Contact() {
   return (
-    <div class="container py-5">
-      <div class="row py-5">
-        <form class="col-md-9 m-auto" method="post" role="form">
-          <div class="row">
-            <div class="form-group col-md-6 mb-3">
-              <label for="inputname">Name</label>
+    <div className="container py-5">
+      <div className="row py-5">
+        <form className="col-md-9 m-auto" method="post" role="form">
+          <div className="row">
+            <div className="form-group col-md-6 mb-3">
+              <label htmlFor="inputname">Name</label>
               <input
                 type="text"
-                class="form-control mt-1"
+                className="form-control mt-1"
                 id="name"
                 name="name"
                 placeholder="Name"
               />
             </div>
-            <div class="form-group col-md-6 mb-3">
-              <label for="inputemail">Email</label>
+            <div className="form-group col-md-6 mb-3">
+              <label htmlFor="inputemail">Email</label>
               <input
                 type="email"
-                class="form-control mt-1"
+                className="form-control mt-1"
                 id="email"
                 name="email"
                 placeholder="Email"
               />
             </div>
           </div>
-          <div class="mb-3">
-            <label for="inputsubject">Subject</label>
+          <div className="mb-3">
+            <label htmlFor="inputsubject">Subject</label>
             <input
               type="text"
-              class="form-control mt-1"
+              className="form-control mt-1"
               id="subject"
               name="subject"
               placeholder="Subject"
             />
           </div>
-          <div class="mb-3">
-            <label for="inputmessage">Message</label>
+          <div className="mb-3">
+            <label htmlFor="inputmessage">Message</label>
             <textarea
-              class="form-control mt-1"
+              className="form-control mt-1"
               id="message"
               name="message"
               placeholder="Message"
               rows="8"
             ></textarea>
           </div>
-          <div class="row">
-            <div class="col text-end mt-2">
-              <button type="submit" class="btn btn-success btn-lg px-3">
+          <div className="row">
+            <div className="col text-end mt-2">
+              <button type="submit" className="btn btn-warning btn-lg px-3">
                 Let’s Talk
               </button>
             </div>

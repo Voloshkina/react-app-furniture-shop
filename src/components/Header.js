@@ -1,14 +1,22 @@
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { logout } from "../features/account/accountSlice";
+import { useDispatch } from "react-redux";
+
 export default function Header() {
+  const user = useSelector((state) => state.account.value);
+  const dispatch = useDispatch();
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light shadow">
       <div className="container d-flex justify-content-between align-items-center">
-        <a
+        <Link
+          to="/"
           className="navbar-brand text-warning logo h1 align-self-center"
           href="index.html"
         >
-          Crazy Nuts
-        </a>
-
+          Furniture store
+        </Link>
         <button
           className="navbar-toggler border-0"
           type="button"
@@ -28,67 +36,56 @@ export default function Header() {
           <div className="flex-fill">
             <ul className="nav navbar-nav d-flex justify-content-between mx-lg-auto">
               <li className="nav-item">
-                <a className="nav-link" href="index.html">
-                  Home
-                </a>
+                <Link className="nav-link" to="/">
+                  Головна
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="about.html">
-                  About
-                </a>
+                <Link className="nav-link" to="/about-us">
+                  Про нас
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="shop.html">
-                  Shop
-                </a>
+                <Link className="nav-link" to="/shop">
+                  Магазин
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="contact.html">
-                  Contact
-                </a>
+                <Link className="nav-link" to="/contact">
+                  Контакти
+                </Link>
               </li>
             </ul>
           </div>
           <div className="navbar align-self-center d-flex">
-            <div className="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
-              <div className="input-group">
-                <input
-                  type="text"
-                  className="form-control"
-                  id="inputMobileSearch"
-                  placeholder="Search ..."
-                />
-                <div className="input-group-text">
-                  <i className="fa fa-fw fa-search"></i>
-                </div>
-              </div>
-            </div>
-            <a
-              className="nav-icon d-none d-lg-inline"
-              href="#"
-              data-bs-toggle="modal"
-              data-bs-target="#templatemo_search"
-            >
-              <i className="fa fa-fw fa-search text-dark mr-2"></i>
-            </a>
-            <a
+            <Link
               className="nav-icon position-relative text-decoration-none"
-              href="#"
+              to="/basket"
             >
               <i className="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-              <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
-                7
+              <span className=" userName position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
+                {user.basket.length}
               </span>
-            </a>
-            <a
+            </Link>
+            <Link
               className="nav-icon position-relative text-decoration-none"
-              href="#"
+              to="/account"
             >
               <i className="fa fa-fw fa-user text-dark mr-3"></i>
-              <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
-                +99
+              <span className="userName position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
+                Hi, {!user.name ? "User" : user.name}
               </span>
-            </a>
+            </Link>
+            {user.name && (
+              <button
+                onClick={() => {
+                  dispatch(logout());
+                }}
+                className="logout btn"
+              >
+                Вихід
+              </button>
+            )}
           </div>
         </div>
       </div>
