@@ -21,7 +21,7 @@ export default function Categories() {
       <div className="row">
         {currentItems.map((item, i) => (
           <div className="col-6 col-md-3 p-5 mt-3 align-self-center">
-            <a>
+            <a href="#/">
               <img
                 key={i + 1}
                 src={item.categoryImg}

@@ -14,7 +14,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 .slick-loading .slick-list {
-  background: url() center center no-repeat #fff;
+  background: center center no-repeat #fff;
 }
 @font-face {
   font-family: slick;

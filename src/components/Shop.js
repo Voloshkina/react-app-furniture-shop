@@ -50,6 +50,7 @@ export default function Shop() {
                         </li>
                         <li>
                           <a
+                            href="#/"
                             onClick={() => {
                               if (userStatus) {
                                 dispatch(addToBasket(product.id));

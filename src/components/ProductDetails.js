@@ -62,6 +62,7 @@ export default function ProductDetails() {
                   <div className="row pb-3">
                     <div className="col d-grid">
                       <a
+                        href="#/"
                         onClick={() => {
                           if (userStatus) {
                             dispatch(addToBasket(product.id));
