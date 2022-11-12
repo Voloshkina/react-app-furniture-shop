@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <div className="container py-5">
       <div className="row py-5">
-        <form className="col-md-9 m-auto" method="post" role="form">
+        <form className="col-md-9 m-auto" method="post">
           <div className="row">
             <div className="form-group col-md-6 mb-3">
               <label htmlFor="inputname">Name</label>
@@ -48,7 +48,7 @@ export default function Contact() {
           <div className="row">
             <div className="col text-end mt-2">
               <button type="submit" className="btn btn-warning btn-lg px-3">
-                Let’s Talk
+                Let's Talk
               </button>
             </div>
           </div>

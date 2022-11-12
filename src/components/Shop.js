@@ -36,6 +36,7 @@ export default function Shop() {
                     <img
                       className="card-img rounded-0 img-fluid"
                       src={product.img}
+                      alt={product.title}
                     />
                     <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                       <ul className="list-unstyled">

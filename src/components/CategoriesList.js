@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 export default function CategoriesList({ handleClick }) {
   const categories = useSelector((state) => state.categories.value);
@@ -11,9 +12,9 @@ export default function CategoriesList({ handleClick }) {
           onClick={() => handleClick(item.category)}
           className="pb-3"
         >
-          <a className="text-decoration-none" href="#">
+          <Link to="/shop" className="text-decoration-none ">
             {item.category}
-          </a>
+          </Link>
         </li>
       ))}
     </>

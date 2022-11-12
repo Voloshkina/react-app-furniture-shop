@@ -83,6 +83,7 @@ export default function Footer() {
                   className="text-light text-decoration-none"
                   target="_blank"
                   href="http://facebook.com/"
+                  rel="noreferrer"
                 >
                   <i className="fab fa-facebook-f fa-lg fa-fw"></i>
                 </a>
@@ -92,6 +93,7 @@ export default function Footer() {
                   className="text-light text-decoration-none"
                   target="_blank"
                   href="https://www.instagram.com/"
+                  rel="noreferrer"
                 >
                   <i className="fab fa-instagram fa-lg fa-fw"></i>
                 </a>

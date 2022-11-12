@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
 import { addToBasket } from "../features/account/accountSlice";
@@ -22,7 +21,7 @@ export default function ProductDetails() {
               <img
                 className="card-img img-fluid"
                 src={product.img}
-                alt="Card image cap"
+                alt="Card"
                 id="product-detail"
               />
             </div>

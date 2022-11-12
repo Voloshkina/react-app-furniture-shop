@@ -21,11 +21,12 @@ export default function Categories() {
       <div className="row">
         {currentItems.map((item, i) => (
           <div className="col-6 col-md-3 p-5 mt-3 align-self-center">
-            <a href="#">
+            <a>
               <img
                 key={i + 1}
                 src={item.categoryImg}
                 className=" img-thumbnail border"
+                alt={item.category}
               />
             </a>
             <h5 className="text-center mt-3 mb-3">{item.category}</h5>

@@ -27,7 +27,7 @@ export default function StartNav() {
               className="text-light"
               href="https://fb.com/templatemo"
               target="_blank"
-              rel="sponsored"
+              rel="noreferrer"
             >
               <i className="fab fa-facebook-f fa-sm fa-fw me-2"></i>
             </a>
@@ -35,6 +35,7 @@ export default function StartNav() {
               className="text-light"
               href="https://www.instagram.com/"
               target="_blank"
+              rel="noreferrer"
             >
               <i className="fab fa-instagram fa-sm fa-fw me-2"></i>
             </a>

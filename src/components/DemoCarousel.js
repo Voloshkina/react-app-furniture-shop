@@ -46,8 +46,10 @@ export default function DemoCarousel() {
             <div className="col-lg-6 mb-0 d-flex align-items-center">
               <div className="text-align-left">
                 <h1 className="h1">Широкий асортимент мебелі </h1>
-                <h3 className="h2"></h3>
-                <p>Приємні ціни та подарунки при покупці від 10000 грн</p>
+
+                <p className="mt-3">
+                  Приємні ціни та подарунки при покупці від 10000 грн
+                </p>
               </div>
             </div>
           </div>
